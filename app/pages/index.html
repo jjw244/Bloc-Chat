@@ -7,27 +7,30 @@
 </head>
 <body>
     
+    <ui-view></ui-view>
+    
     <!-- Angular -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/controllers/RoomCtrl.js"></script>
 
-<script src="/scripts/app.js"></script>    
-    
-<!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
 
-
-<script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAXcPk6CIxFM3Rhu7Wha9lrpdE796i1oiM",
-    authDomain: "bloc-chat-6d89a.firebaseapp.com",
-    databaseURL: "https://bloc-chat-6d89a.firebaseio.com",
-    storageBucket: "bloc-chat.appspot.com",
-    messagingSenderId: "163696665364"
-  };
-  firebase.initializeApp(config);
-</script>
-    
+    <!-- Firebase html script -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAXcPk6CIxFM3Rhu7Wha9lrpdE796i1oiM",
+            authDomain: "bloc-chat-6d89a.firebaseapp.com",
+            databaseURL: "https://bloc-chat-6d89a.firebaseio.com",
+            storageBucket: "bloc-chat.appspot.com",
+            messagingSenderId: "163696665364"
+        };
+        firebase.initializeApp(config);
+    </script>    
 </body>
 </html>
