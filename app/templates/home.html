@@ -1,10 +1,17 @@
 <section>
     
     <h1>Home Page</h1>
+    
+    
+    <div ng-controller="ModalDemoCtrl as modal">
+        <button type="button" ng-click="modal.open()">New Room</button>
+    </div>
+    
 
     <ng-repeat ng-repeat="singleRoom in room.rooms">
         <p>{{singleRoom.$id}}</p>
     </ng-repeat>
+    
 
 
 </section>

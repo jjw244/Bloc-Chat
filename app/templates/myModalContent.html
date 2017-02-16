@@ -1,0 +1,29 @@
+<div ng-controller="ModalDemoCtrl as modal">
+    
+    <script type="text/ng-template">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+        </div>
+
+        <form role="form">
+          <div class="form-group">
+            <label for="newRoomName">New Room Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name" ng-model="name">
+          </div>
+        </form>
+
+        <div class="modal-body" id="modal-body">
+            <ul>
+                <li ng-repeat="item in modal.items">
+                    <a href="#" ng-click="$event.preventDefault(); modal.selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ modal.selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="modal.ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="modal.cancel()">Cancel</button>
+        </div>
+    </script>
+    
+</div>
