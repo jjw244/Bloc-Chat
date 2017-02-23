@@ -1,19 +1,16 @@
 (function() {
-    function ModalInstanceCtrl($uibModalInstance, items) {
-        var modal = this;
-        modal.items = items;
-        modal.selected = {
-            item: modal.items[0]
+    function ModalInstanceCtrl ($uibModalInstance) {
+
+        var $ctrl = this;
+    
+        $ctrl.ok = function () {
+            $uibModalInstance.close($ctrl.newroom);
         };
 
-        modal.ok = function () {
-            $uibModalInstance.close(modal.selected.item);
+        $ctrl.cancel = function () {
+            $uibModalInstance.dismiss();
         };
-
-        modal.cancel = function () {
-            $uibModalInstance.dismiss('cancel');
-        };
-    }
+    };
         
     angular
          .module('blocChat')

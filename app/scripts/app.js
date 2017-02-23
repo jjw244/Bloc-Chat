@@ -11,13 +11,8 @@
              url: '/',
              controller: 'RoomCtrl as room',
              templateUrl: '/templates/home.html'
-         }) 
-         .state('modal', {
-             url: '/modal',
-             controller: 'ModalDemoCtrl as modal',
-             templateUrl: '/templates/myModalContent.html'
-         });
-     }
+         })
+     };
  
     angular
          .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
