@@ -1,0 +1,13 @@
+<section>
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Create new room</h3>
+    </div>
+    <div class="modal-body">Enter a room name
+        <br>
+        <input type="text" ng-model="$ctrl.newroom" placeholder="New Room Name">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Create Room</button>
+    </div>
+</section>
