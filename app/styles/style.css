@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  /*  height: 100%;  makes sure our HTML takes up 100% of the browser window */
+  font-size: 100%;
+  width: 100%;
+  margin: 0px;
+  width: 100%;
+  background: -webkit-linear-gradient(top, white, lavender);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top, white, lavender);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top, white, lavender);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(top, white, lavendere);
+  /* Standard syntax */
+}
+
+body {
+  /*     min-height: 100%;          says the height of the body must be, at minimum, 100% of the window */
+}
+
+.home-title {
+  text-align: center;
+}
+
+.rooms-sidebar-title {
+  clear: both;
+  height: 100%;
+}
+
+.rooms-list {
+  margin: auto;
+  padding: 15px;
+}
+
+.messages-list {
+  width: 70%;
+  float: left;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  transform: rotate(180deg);
+}
+
+ul>li {
+  transform: rotate(-180deg);
+}
