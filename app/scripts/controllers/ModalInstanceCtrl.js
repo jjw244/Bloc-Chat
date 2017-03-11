@@ -1,18 +1,18 @@
-(function() {
-    function ModalInstanceCtrl ($uibModalInstance) {
+(function () {
+  function ModalInstanceCtrl($uibModalInstance) {
 
-        var $ctrl = this;
-    
-        $ctrl.ok = function () {
-            $uibModalInstance.close($ctrl.newroom);
-        };
+    var $modal = this;
 
-        $ctrl.cancel = function () {
-            $uibModalInstance.dismiss();
-        };
+    $modal.ok = function () {
+      $uibModalInstance.close($modal.newroom);
     };
-        
-    angular
-         .module('blocChat')
-         .controller('ModalInstanceCtrl', ModalInstanceCtrl);
+
+    $modal.cancel = function () {
+      $uibModalInstance.dismiss();
+    };
+  };
+
+  angular
+    .module('blocChat')
+    .controller('ModalInstanceCtrl', ModalInstanceCtrl);
 })();

@@ -13,7 +13,7 @@
       <div ng-repeat="singleRoom in home.rooms">
         <ul>
           <li>
-            <p ng-click="home.selectRoom(singleRoom.$value)"> {{singleRoom.$value}} </p>
+            <p ng-click="home.selectRoom(singleRoom.$id)"> {{singleRoom.$value}} </p>
           </li>
         </ul>
       </div>
@@ -21,10 +21,9 @@
   </section>
 
   <section class="col-xs-8 messages-list">
-    <!--     Populate Room selected and messages for specific roomId-->
     <div>
       <h2>{{home.selectedRoom}}</h2>
-      <p ng-repeat="message in home.messages">{{ message.username }} {{ message.content }}</p>
+      <p ng-repeat="message in home.messages">{{ message.username }}: {{ message.content }}</p>
     </div>
   </section>
 </main>

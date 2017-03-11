@@ -1,31 +1,31 @@
-(function() {
-    function ModalDemoCtrl(Room, $uibModal, newroom) {
-     
-        var $ctrl = this;
+(function () {
+  function ModalDemoCtrl(Room, $uibModal, newroom) {
 
-        $ctrl.open = function () {
-            
-            var modalInstance = $uibModal.open({
-                
-                ariaLabelledBy: 'modal-title',
-                ariaDescribedBy: 'modal-body',
-                templateUrl: '/templates/myModalContent.html',
-                controller: 'ModalInstanceCtrl',
-                controllerAs: '$ctrl',
-                resolve: {
-                    newRoom: function () {
-                      return $ctrl.newroom;
-                    }
-                }
-            });
+    var $modal = this;
 
-            modalInstance.result.then(function (newroom) {
-              Room.add(newroom);
-            });
-        };
+    $modal.open = function () {
+
+      var modalInstance = $uibModal.open({
+
+        ariaLabelledBy: 'modal-title',
+        ariaDescribedBy: 'modal-body',
+        templateUrl: '/templates/myModalContent.html',
+        controller: 'ModalInstanceCtrl',
+        controllerAs: '$modal',
+        resolve: {
+          newRoom: function () {
+            return $modal.newroom;
+          }
+        }
+      });
+
+      modalInstance.result.then(function (newroom) {
+        Room.add(newroom);
+      });
     };
-    
-     angular
-         .module('blocChat')
-         .controller('ModalDemoCtrl', ['Room', '$uibModal', ModalDemoCtrl]);
+  };
+
+  angular
+    .module('blocChat')
+    .controller('ModalDemoCtrl', ['Room', '$uibModal', ModalDemoCtrl]);
 })();

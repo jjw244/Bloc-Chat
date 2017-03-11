@@ -10,12 +10,9 @@
       });
     }
 
-    
-
     return {
       all: rooms,
       add: addRoom,
-      //      messages: $firebaseArray(ref.child('messages').orderByChild("roomID").equalTo("roomId")),
     };
   }
 
