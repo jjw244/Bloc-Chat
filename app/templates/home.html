@@ -5,15 +5,15 @@
   </section>
 
   <section class="col-xs-4 rooms-sidebar-title">
-    <h2 class="chat-rooms-title">Chat Rooms &nbsp;<span ng-controller="ModalDemoCtrl as $ctrl">
-            <button class="btn" type="button" ng-click="$ctrl.open()">New<br> Chat Room</button>
+    <h2 class="chat-rooms-title">Chat Rooms &nbsp;<span ng-controller="NewRoomCtrl as $modal">
+            <button class="btn" type="button" ng-click="$modal.open()">New<br> Chat Room</button>
         </span></h2>
 
     <div class="rooms-list">
-      <div ng-repeat="singleRoom in home.rooms">
+      <div ng-repeat="singleRoom in room.rooms">
         <ul>
           <li>
-            <p ng-click="home.selectRoom(singleRoom.$id)"> {{singleRoom.$value}} </p>
+            <p ng-click="room.selectRoom(singleRoom.$id)"> {{singleRoom.$value}} </p>
           </li>
         </ul>
       </div>
@@ -21,9 +21,9 @@
   </section>
 
   <section class="col-xs-8 messages-list">
-    <div>
-      <h2>{{home.selectedRoom}}</h2>
-      <p ng-repeat="message in home.messages">{{ message.username }}: {{ message.content }}</p>
+    <div  id="username">
+      <h2>{{room.selectedRoom}}</h2>
+      <p ng-repeat="message in room.messages">{{ message.username }}: {{ message.content }}</p>
     </div>
   </section>
 </main>

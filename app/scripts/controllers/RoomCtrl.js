@@ -1,5 +1,5 @@
 (function () {
-  function HomeCtrl(Room, Message) {
+  function RoomCtrl(Room, Message) {
     this.rooms = Room.all;
 
     this.selectRoom = function (room) {
@@ -10,5 +10,5 @@
 
   angular
     .module('blocChat')
-    .controller('HomeCtrl', ['Room', 'Message', HomeCtrl]);
+    .controller('RoomCtrl', ['Room', 'Message', RoomCtrl]);
 })();
