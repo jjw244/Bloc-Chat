@@ -7,7 +7,7 @@
 }
 
 html {
-  /*  height: 100%;  makes sure our HTML takes up 100% of the browser window */
+  height: 100%;  /* makes sure our HTML takes up 100% of the browser window */
   font-size: 100%;
   width: 100%;
   margin: 0px;
@@ -20,10 +20,6 @@ html {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(top, white, lavendere);
   /* Standard syntax */
-}
-
-body {
-  /*     min-height: 100%;          says the height of the body must be, at minimum, 100% of the window */
 }
 
 .home-title {
