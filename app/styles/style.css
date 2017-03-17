@@ -1,3 +1,4 @@
+/*
 *,
 *::before,
 *::after {
@@ -5,9 +6,11 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+*/
 
 html {
-  height: 100%;  /* makes sure our HTML takes up 100% of the browser window */
+  height: 100%;
+  /* makes sure our HTML takes up 100% of the browser window */
   font-size: 100%;
   width: 100%;
   margin: 0px;
@@ -18,12 +21,13 @@ html {
   /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(top, white, lavender);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(top, white, lavendere);
+  background: linear-gradient(top, white, lavender);
   /* Standard syntax */
 }
 
 .home-title {
   text-align: center;
+  height: 10%;
 }
 
 .rooms-sidebar-title {
@@ -37,17 +41,13 @@ html {
 }
 
 .messages-list {
-  width: 70%;
+/*  width: 50%;*/
   float: left;
   height: 100%;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
-  transform: rotate(180deg);
-}
-
-ul>li {
-  transform: rotate(-180deg);
+#send-messages {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
 }
