@@ -8,7 +8,7 @@
       var modalInstance = $uibModal.open({
 
         templateUrl: '/templates/newRoom.html',
-        controller: 'ModalInstanceCtrl',
+        controller: 'NewRoomInstanceCtrl',
         controllerAs: '$modal',
         resolve: {
           newRoom: function () {

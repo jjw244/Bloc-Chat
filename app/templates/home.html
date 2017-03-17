@@ -1,29 +1,30 @@
 <main>
-
-  <section class="col-xs-12 home-title">
+  <section class="col-lg-12 home-title">
     <h1>Bloc Chat</h1>
   </section>
 
   <section class="col-xs-4 rooms-sidebar-title">
     <h2 class="chat-rooms-title">Chat Rooms &nbsp;<span ng-controller="NewRoomCtrl as $modal">
-            <button class="btn" type="button" ng-click="$modal.open()">New<br> Chat Room</button>
+            <button class="btn-sm" type="button" ng-click="$modal.open()">New<br> Chat Room</button>
         </span></h2>
-
     <div class="rooms-list">
       <div ng-repeat="singleRoom in room.rooms">
-        <ul>
-          <li>
-            <p ng-click="room.selectRoom(singleRoom.$id)"> {{singleRoom.$value}} </p>
-          </li>
-        </ul>
+        <p ng-click="room.selectRoom(singleRoom.$id)"> {{singleRoom.$value}} </p>
       </div>
     </div>
   </section>
 
   <section class="col-xs-8 messages-list">
-    <div  id="username">
+    <div>
       <h2>{{room.selectedRoom}}</h2>
-      <p ng-repeat="message in room.messages">{{ message.username }}: {{ message.content }}</p>
+      <p ng-repeat="message in room.messages">{{ message.sentAt }} <strong>{{ message.username }}:</strong> {{ message.content }}</p>
     </div>
+
+      <div class="input-group" id="send-messages">
+        <input autofocus type="text" class="form-control" placeholder="Type Your Message Here" ng-model="room.newMessage">
+        <span class="input-group-btn">
+        <button type="button" class="btn btn-send" ng-click="room.sendMessage()">Send</button>
+      </span>
+      </div>
   </section>
 </main>
