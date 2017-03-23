@@ -1,6 +1,5 @@
 (function () {
   function Message($firebaseArray, $cookies) {
-    var $messSend = this;
 
     var ref = firebase.database().ref().child('messages');
     var messagesRef = $firebaseArray(ref);
@@ -13,7 +12,7 @@
     var sentAt = function () {
       
       var myDate = new Date();
-      var sec = myDate.getSeconds();
+//      var sec = myDate.getSeconds();
       var min = myDate.getMinutes();
       var hrs = myDate.getHours();
       var amPm = (hrs > 11) ? "pm" : "am";
@@ -26,7 +25,7 @@
         min = "0" + min;
       }
     
-      return hrs + ":" + min + ":" + sec + " " + amPm;
+      return hrs + ":" + min + " " + amPm;
     }
 
     var send = function (newMessage, roomId) {

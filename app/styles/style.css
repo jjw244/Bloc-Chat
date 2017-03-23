@@ -51,3 +51,8 @@ html {
   bottom: 0;
   width: 50%;
 }
+
+.message-title {
+  padding-left: 75px;
+  padding-bottom: 30px;
+}

@@ -1,13 +1,11 @@
 (function () {
-  function NewRoomInstanceCtrl($uibModalInstance) {
+  function NewRoomInstanceCtrl($uibModalInstance, $scope) {
 
-    var $modal = this;
-
-    $modal.ok = function () {
-      $uibModalInstance.close($modal.newroom);
+    $scope.ok = function () {
+      $uibModalInstance.close($scope.newroom);
     };
 
-    $modal.cancel = function () {
+    $scope.cancel = function () {
       $uibModalInstance.dismiss();
     };
   };
