@@ -11,6 +11,6 @@
   };
 
   angular
-    .module('blocChat')
+    .module('chatterBox')
     .controller('NewRoomInstanceCtrl', NewRoomInstanceCtrl);
 })();

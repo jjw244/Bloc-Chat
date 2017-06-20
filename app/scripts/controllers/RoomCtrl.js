@@ -15,6 +15,6 @@
   }
 
   angular
-    .module('blocChat')
+    .module('chatterBox')
     .controller('RoomCtrl', ['Room', 'Message', RoomCtrl]);
 })();

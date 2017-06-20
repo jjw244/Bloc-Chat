@@ -1,10 +1,10 @@
 {
-  "name": "bloc-frontend-project-starter",
+  "name": "Chatter-Box",
   "version": "0.0.2",
-  "description": "Starter project for the Bloc Frontend Web Development",
+  "description": "A place for friends to meet or to meet new friends",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bloc/bloc-frontend-project-starter"
+    "url": "https://github.com/jjw244/Chatter-Box"
   },
   "main": "server.js",
   "scripts": {

@@ -30,7 +30,7 @@
 
     var send = function (newMessage, roomId) {
       var message = {
-        username: $cookies.get('blocChatCurrentUser'),
+        username: $cookies.get('chatterBoxCurrentUser'),
         content: newMessage,
         sentAt: sentAt(),
         roomId: roomId
@@ -45,6 +45,6 @@
   }
 
   angular
-    .module('blocChat')
+    .module('chatterBox')
     .factory('Message', ['$firebaseArray', '$cookies', Message]);
 })();

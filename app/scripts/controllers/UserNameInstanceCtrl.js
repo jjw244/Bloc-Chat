@@ -12,6 +12,6 @@
   };
 
   angular
-    .module('blocChat')
+    .module('chatterBox')
     .controller('UserNameInstanceCtrl', UserNameInstanceCtrl);
 })();

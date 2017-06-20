@@ -1,7 +1,7 @@
 (function () {
-  function BlocChatCookies($cookies, $uibModal, username) {
+  function ChatterBoxCookies($cookies, $uibModal, username) {
     
-    if (!$cookies.get('blocChatCurrentUser') || $cookies.get('blocChatCurrentUser') === '') {
+    if (!$cookies.get('chatterBoxCurrentUser') || $cookies.get('chatterBoxCurrentUser') === '') {
       var modalInstance = $uibModal.open({
         templateUrl: '/templates/userName.html',
         controller: 'UserNameInstanceCtrl',
@@ -15,12 +15,12 @@
       });
 
       modalInstance.result.then(function (data) {
-        $cookies.put('blocChatCurrentUser', data);
+        $cookies.put('chatterBoxCurrentUser', data);
       });
     }
   }
 
   angular
-    .module('blocChat')
-    .run(['$cookies', '$uibModal', BlocChatCookies]);
+    .module('chatterBox')
+    .run(['$cookies', '$uibModal', ChatterBoxCookies]);
 })();

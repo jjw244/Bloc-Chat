@@ -21,6 +21,6 @@
   };
 
   angular
-    .module('blocChat')
+    .module('chatterBox')
     .controller('NewRoomCtrl', ['Room', '$uibModal', NewRoomCtrl]);
 })();
