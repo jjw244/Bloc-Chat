@@ -11,13 +11,19 @@
 html {
   min-height: 100%;
   width: 100%;
-  background: -webkit-linear-gradient(top, white, lavender);
+  font-size: 100%;
+  background: -webkit-linear-gradient(bottom, white, lavender);
   /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(top, white, lavender);
   /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(top, white, lavender);
   /* For Firefox 3.6 to 15 */
-  background: lavender;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: transparent;
 }
 
 .footer {
