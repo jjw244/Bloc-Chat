@@ -1,27 +1,3 @@
-<h1 class="text-center">Chatter Box</h1>
-<div class="container">
-  
-    <div class="col-md-4">
-      <h2 class="chat-rooms-title">Chat Rooms &nbsp;</h2>
-      <p class="new-button" ng-controller="NewRoomCtrl as $newRoomModal">
-        <button class="btn btn-sm" type="button" ng-click="$newRoomModal.open()">New<br> Chat Room</button>
-      </p>
-      <ng-repeat ng-repeat="singleRoom in room.rooms">
-        <p ng-click="room.selectRoom(singleRoom.$value)"> {{singleRoom.$value}}</p>
-      </ng-repeat>
-    </div>
 
-    <div class="col-md-8">
-      <h2>{{room.selectedRoom}}</h2>
-      <div ng-repeat="message in room.messages">{{ message.sentAt }} <strong>{{ message.username }}:</strong> {{ message.content }}</div>
-    </div>
-    <footer class="footer">
-      <div class="col-md-8 input-group">
-        <input autofocus type="text" class="form-control" placeholder="Type Your Message Here" ng-model="room.newMessage">
-        <p class="input-group-btn">
-          <button type="button" class="btn btn-send" ng-click="room.sendMessage()">Send</button>
-        </p>
-      </div>
-    </footer>
-  
-</div>
+
+<div ng-include="./templates/navbar.html"></div>

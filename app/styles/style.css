@@ -8,22 +8,39 @@
 }
 */
 
-html {
-  min-height: 100%;
-  width: 100%;
+html{
+  min-height: 100vh;
   font-size: 100%;
-  background: -webkit-linear-gradient(bottom, white, lavender);
+  width: 100%;
+  position: relative;
+  background: -webkit-linear-gradient(top, white, lavender);
   /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(top, white, lavender);
   /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(top, white, lavender);
   /* For Firefox 3.6 to 15 */
+  padding: 10px 0px 0px 10px;
 }
 
 body {
-  min-height: 100vh;
-  width: 100%;
-  background: transparent;
+  font-family: 'Copperplate';
+  height: 100vh;
+  background-color: transparent;
+}
+
+.col-md-4 {
+  float: left;
+/*  background-color: lightgray;*/
+  max-height: 100vh;
+  overflow-x: auto;
+  width: 30%;
+}
+
+.col-md-8 {
+  max-height: 100vh;
+/*  float: right;*/
+  overflow-y: scroll;
+/*  width: 70%;*/
 }
 
 .footer {
@@ -31,5 +48,50 @@ body {
   bottom: 0;
   width: 100%;
   height: 60px;
-  /*  text-align: center;*/
+/*  text-align: center;*/
+}
+
+.col-md-8.input-group {
+  width: 70%;
+/*  max-width: 680px;*/
+  float: right;
+  padding-right: 10px;
+}
+
+div.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    width: 100%;
+    background-color: lightblue;
+    border-radius: 2px;
+    color: black;
+    padding: 16px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font
+}
+
+div.button:hover {
+    background-color: lightgrey;
+/*    color: white;*/
+}
+
+ng-repeat {
+  padding-top: 10px;
+  font-size: 16px;
+  text-decoration: underline;
+  
+}
+div.ng-repeat {
+  overflow-y: auto;
+}
+
+.new-room {
+  
+  border-color: black;
+  border-width: thin;
 }
