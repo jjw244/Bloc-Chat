@@ -1,4 +1,5 @@
-<h1 class="text-center">Chatter Box</h1>
+<div ng-include src="'/templates/navbar.html'"></div>
+<h1 class="text-center" id="room-title"><strong>{{room.selectedRoom}}</strong></h1>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
@@ -8,12 +9,11 @@
       </div>
       <br>
        <ng-repeat ng-repeat="singleRoom in room.rooms">
-        <p ng-click="room.selectRoom(singleRoom.$value)"> {{singleRoom.$value}}</p>
+        <p ng-click="room.selectRoom(singleRoom.$value)">{{singleRoom.$value}}</p>
       </ng-repeat>
     </div>
-    <div class="col-md-8">
-      <h2>{{room.selectedRoom}}</h2>
-      <div class="ng-rpeat" ng-repeat="message in room.messages">{{ message.sentAt }} <strong>{{ message.username }}:</strong> {{ message.content }}</div>
+    <div class="col-md-8 messages">
+      <div class="ng-rpeat" ng-repeat="message in room.messages">{{ message.sentAt }} <strong>{{ message.username }}:</strong>{{ message.content }}</div>
     </div>
   </div>
 </div>
